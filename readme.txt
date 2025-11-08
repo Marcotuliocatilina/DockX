@@ -9,3 +9,6 @@ prova primo commit
 * git add .                 per aggiungere tutti i file modificati
 * git commit -m "Descrizione chiara delle modifiche"            per commentare il commit
 * git push origin main      per allineare il repository remoto 
+
+* per aprire una linea di comando ctrl shift p
+* per aprire terminale GIT  ctrl ò
