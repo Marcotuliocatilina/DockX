@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
-import login from './components/login.vue'
+import Login from './components/login.vue'
+import MainPage from './components/MainPage.vue'
+
+const loggedIn = ref(false)
+function onLogin() { loggedIn.value = true }
 </script>
 
 <template>
@@ -13,8 +18,10 @@ import login from './components/login.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  provaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  <Login/>
+  <div>
+  <Login v-if="!loggedIn" @login="onLogin" />
+  <MainPage v-else />
+  </div>
 </template>
 
 <style scoped>
